@@ -25,12 +25,13 @@ function writePassword() {
             var red = character[Math.floor(Math.random()*72)];
             pswrd += red;
           }
-        randomtype();
+        randomtype()
     }
 }
+    
     generatePassword();
-    console.log(pswrd);
-    passwordText.value=pswrd;
+    passwordText.value=pswrd
+
 }
 
 // Add event listener to generate button
