@@ -1,6 +1,6 @@
 //lists variables
 var a = "<=>?@!#$%&abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-var character = a.split("");
+var type = a.split("");
 var pswrd = "";
 
 
@@ -26,7 +26,7 @@ function writePassword() {
     for( var x=0; x < lngth; x++){
         //random character generator
         function randomtype(){
-            var red = character[Math.floor(Math.random()*72)];
+            var red = type[Math.floor(Math.random()*type.length)];
             pswrd += red;
           }
         randomtype()
