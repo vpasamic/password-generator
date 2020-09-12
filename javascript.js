@@ -12,33 +12,25 @@ var pswrd = "";
 var generateBtn = document.querySelector("#generate");
 
 
-console.log(pswrd)
+
 // Write password to the #password input
 function writePassword() {
-    var length = parseInt(prompt("How long of a password?"))
-//   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-    console.log(length)
-//   passwordText.value = password;
-function generatePassword(){
+    var length = parseInt(prompt("How long of a password?"));
+    var passwordText = document.querySelector("#password");
+    function generatePassword(){
     //for loop length
     for( var x=0; x < length; x++){
         //random character generator
         function randomtype(){
-            var red = character[Math.floor(Math.random()*72)]
+            var red = character[Math.floor(Math.random()*72)];
             pswrd += red;
-          };
-        randomtype()
-       
-    
-
+          }
+        randomtype();
     }
 }
-    
     generatePassword();
-    console.log(pswrd)
-    passwordText.value=pswrd
-
+    console.log(pswrd);
+    passwordText.value=pswrd;
 }
 
 // Add event listener to generate button
