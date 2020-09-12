@@ -1,7 +1,7 @@
 //lists variables
 var a = "<=>?@!#$%&abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 var type = a.split("");
-var pswrd = "";
+
 
 
 
@@ -15,7 +15,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-    pswrd = "";
+    var pswrd = "";
     var lngth = parseInt(prompt("How long of a password?"));
     //make it between 8 to 128
    
