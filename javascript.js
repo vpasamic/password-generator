@@ -1,6 +1,10 @@
+//lists variables
 var a = "<=>?@!#$%&abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-
 var character = a.split("");
+var pswrd = "";
+
+
+
 
 
 
@@ -8,32 +12,34 @@ var character = a.split("");
 var generateBtn = document.querySelector("#generate");
 
 
-
+console.log(pswrd)
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+    var length = parseInt(prompt("How long of a password?"))
+//   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+    console.log(length)
+//   passwordText.value = password;
+function generatePassword(){
+    //for loop length
+    for( var x=0; x < length; x++){
+        //random character generator
+        function randomtype(){
+            var red = character[Math.floor(Math.random()*72)]
+            pswrd += red;
+          };
+        randomtype()
+       
+    
 
-  passwordText.value = password;
+    }
+}
+    
+    generatePassword();
+    console.log(pswrd)
+    passwordText.value=pswrd
 
 }
-function randomtype(){
-    console.log(character[Math.floor(Math.random()*72)])
-};
-
-
-
-randomtype()
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-// function passgen(event){
-//     if (event.target.matches("button")){
-//         event.preventDefault();
-
-//     }
-// }
-
-// generate.addEventListener("click", passgen)
